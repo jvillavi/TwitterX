@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TwitterX.iml" filepath="$PROJECT_DIR$/TwitterX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.jvillavi.gui/com.jvillavi.gui.iml" filepath="$PROJECT_DIR$/com.jvillavi.gui/com.jvillavi.gui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.jvillavi.servicios/com.jvillavi.servicios.iml" filepath="$PROJECT_DIR$/com.jvillavi.servicios/com.jvillavi.servicios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.jvillavi.tipos/com.jvillavi.tipos.iml" filepath="$PROJECT_DIR$/com.jvillavi.tipos/com.jvillavi.tipos.iml" />
+    </modules>
+  </component>
+</project>

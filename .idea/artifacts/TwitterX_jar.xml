@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TwitterX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TwitterX_jar</output-path>
+    <root id="archive" name="TwitterX.jar">
+      <element id="module-output" name="TwitterX" />
+      <element id="module-output" name="com.jvillavi.servicios" />
+      <element id="module-output" name="com.jvillavi.tipos" />
+      <element id="module-output" name="com.jvillavi.gui" />
+    </root>
+  </artifact>
+</component>
