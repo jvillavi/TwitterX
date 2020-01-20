@@ -14,6 +14,9 @@ public class ParserTweets {
      * @return La lista de Tweets recientes
      */
     public static List<Tweet> obtenerTweets() {
+
+        //TODO Revisar si en verdad es necesario usar metodos estaticos en este contexto
+
         return Arrays.asList(
                 new Tweet("jvillavic", new Date(), "No me gusta vb6"),
                 new Tweet("promero", new Date(), "Java 9 Rocks!"),

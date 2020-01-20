@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TransferenciasInternacionales"
+	targetNamespace="http://www.bolivariano.com/CashManagement/TransferenciasInternacionales"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.bolivariano.com/CashManagement/TransferenciasInternacionales"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mtin="http://www.bolivariano.com/CashManagement/MensajeTransferenciasInternacionales" xmlns:xsd2="http://www.bolivariano.com/MensajeBolivariano">
+	<wsdl:documentation>Servicio de tarea TransferenciasInternales</wsdl:documentation>
+
+    <wsdl:types>
+	    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+	        <import namespace="http://www.bolivariano.com/CashManagement/MensajeTransferenciasInternacionales" schemaLocation="../../../../../../../Downloads/Contrato_ObtenerISD_20160303/MensajesCanonicos/MensajeTransferenciasInternacionales.xsd"></import>
+	    </schema>
+    </wsdl:types>
+	
+    <wsdl:message name="mensajeEntradaObtenerBancosInternacionales">
+        <wsdl:part name="parameters"
+                   element="mtin:mensajeEntradaObtenerBancosInternacionales"></wsdl:part>
+    </wsdl:message>
+    
+    <wsdl:message name="mensajeSalidaObtenerBancosInternacionales">
+    	<wsdl:part name="parameters" element="mtin:mensajeSalidaObtenerBancosInternacionales"></wsdl:part>
+    </wsdl:message>
+        
+    <wsdl:message name="obtenerISDRequest">
+    	<wsdl:part name="parameters" element="mtin:mensajeEntradaObtenerISD"></wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="obtenerISDResponse">
+    	<wsdl:part name="parameters" element="mtin:mensajeSalidaObtenerISD"></wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="TransInterPortType">
+    	<wsdl:operation name="obtenerBancosInternacionales">
+            <wsdl:input message="tns:mensajeEntradaObtenerBancosInternacionales"></wsdl:input>
+            <wsdl:output message="tns:mensajeSalidaObtenerBancosInternacionales"></wsdl:output>
+    	</wsdl:operation>
+  <wsdl:operation name="obtenerPaisesPermitidos">
+   <wsdl:input message="tns:mensajeEntradaObtenerPaisesPermitidos"/>
+   <wsdl:output message="tns:mensajeSalidaObtenerPaisesPermitidos"/>
+  </wsdl:operation>
+  <wsdl:operation name="obtenerISD">
+  	<wsdl:input message="tns:obtenerISDRequest"></wsdl:input>
+  	<wsdl:output message="tns:obtenerISDResponse"></wsdl:output>
+  </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:service name="TransInterService">
+		<wsdl:port name="TransInterPort" binding="tns:TransInterBindingSOAP11">
+			<soap:address location="http://www.bolivariano.com/" />
+		</wsdl:port>
+	</wsdl:service>
+ <wsdl:message name="mensajeEntradaObtenerPaisesPermitidos">
+  <wsdl:part name="part" element="mtin:mensajeEntradaObtenerPaisesPermitidos"/>
+ </wsdl:message>
+ <wsdl:message name="mensajeSalidaObtenerPaisesPermitidos">
+  <wsdl:part name="part" element="mtin:mensajeSalidaObtenerPaisesPermitidos"/>
+ </wsdl:message>
+ <wsdl:binding name="TransInterBindingSOAP11"
+ 	type="tns:TransInterPortType">
+
+ 	<soap:binding style="document"
+ 		transport="http://schemas.xmlsoap.org/soap/http" />
+ 	<wsdl:operation name="obtenerBancosInternacionales">
+
+ 		<soap:operation
+ 			soapAction="http://www.bolivariano.com/CashManagement/TransferenciasInternacionales/obtenerBancosInternacionales" />
+ 		<wsdl:input>
+
+ 			<soap:body use="literal" />
+ 		</wsdl:input>
+ 		<wsdl:output>
+
+ 			<soap:body use="literal" />
+ 		</wsdl:output>
+ 	</wsdl:operation>
+ 	<wsdl:operation name="obtenerPaisesPermitidos">
+
+ 		<soap:operation
+ 			soapAction="http://www.bolivariano.com/CashManagement/TransferenciasInternacionales/obtenerPaisesPermitidos" />
+ 		<wsdl:input>
+
+ 			<soap:body use="literal" />
+ 		</wsdl:input>
+ 		<wsdl:output>
+
+ 			<soap:body use="literal" />
+ 		</wsdl:output>
+ 	</wsdl:operation>
+ 	<wsdl:operation name="obtenerISD">
+
+ 		<soap:operation
+ 			soapAction="http://www.bolivariano.com/CashManagement/TransferenciasInternacionales/obtenerISD" />
+ 		<wsdl:input>
+
+ 			<soap:body use="literal" />
+ 		</wsdl:input>
+ 		<wsdl:output>
+
+ 			<soap:body use="literal" />
+ 		</wsdl:output>
+ 	</wsdl:operation>
+ </wsdl:binding>
+</wsdl:definitions>
