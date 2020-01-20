@@ -12,6 +12,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="jvillavi &lt;jorge.a.villavicencio@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1We2shUWtsEuPWWfY9dv8EAQnCg" />
@@ -84,5 +89,9 @@
       <screen x="46" y="27" width="1874" height="1053" />
     </state>
     <state x="524" y="184" width="800" height="690" key="#Project_Structure/46.27.1874.1053@46.27.1874.1053" timestamp="1579495984266" />
+    <state x="507" y="149" width="948" height="820" key="CommitChangelistDialog2" timestamp="1579496250166">
+      <screen x="46" y="27" width="1874" height="1053" />
+    </state>
+    <state x="507" y="149" width="948" height="820" key="CommitChangelistDialog2/46.27.1874.1053@46.27.1874.1053" timestamp="1579496250166" />
   </component>
 </project>
